@@ -32,4 +32,10 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+app.UseCors(builder => builder
+    .AllowAnyOrigin()
+    .AllowAnyMethod()
+    .AllowAnyHeader());
+
 app.Run();
+
